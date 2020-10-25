@@ -1,0 +1,98 @@
+.navbar {
+	width: 200px;
+	height: 100%;
+	background-color: #6E6E6DFF;
+	opacity: 0.75;
+	position: fixed;
+	top: 100px;
+	left: -300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0 30% 30% 0;
+	transition: left .8s cubic-bezier(1, 0, 0, 1);
+}
+
+.change {
+	left: 0;
+}
+
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 130px;
+	left: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #FAD0C9FF;
+	transition: all 0.8s;
+
+}
+
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+	opacity: 0;
+}
+
+.change .line-3 {
+	transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+
+}
+
+.nav-item {
+	list-style: none;
+	margin: 25px;
+}
+
+.nav-link {
+	text-decoration: none;
+	font-size: 15px;
+	color: #FAD0C9FF;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	position: relative;
+	padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: chocolate;
+	position: absolute;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+
+.nav-link::after {
+	bottom: 0;
+	transform-origin: right;
+}
+
+.nav-link::before {
+	top: 0;
+	transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+	transform: scaleX(1);
+}
