@@ -1,74 +1,54 @@
-/* CORE STYLES */
-:root {
-  --primary-color: rgba(13, 110, 139, 0.75);
-  --overlay-color: rgba(24, 39, 51 , 0.85);
-  --menu-speed: 0.75s;
-}
-
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.4;
+  margin: 0;
+  font-family: Arial;
 }
 
-.container {
-  max-width: 960px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 3rem;
-}
-
-.showcase {
-  background: var(--primary-color);
-  color: #fff;
-  height: 100vh;
-  position: relative;
-}
-
-.showcase:before {
-  content: '';
-  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.showcase .showcase-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.header {
   text-align: center;
-  height: 100%;
+  padding: 32px;
 }
 
-.showcase h1 {
-  font-size: 4rem;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.showcase p {
-  font-size: 1.3rem;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  background-color: black;
 }
 
-.btn {
-  display: inline-block;
-  border: none;
-  background: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  transition: opacity 1s ease-in-out;
-  text-decoration: none;
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
-.btn:hover {
-  opacity: 0.7;
+.column h2, p {
+  color: white;
+  text-align: center;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
