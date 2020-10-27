@@ -1,8 +1,7 @@
 .navbar {
 	width: 200px;
 	height: 100%;
-	background-color: #AFAFAF;
-	opacity: 0.75;
+	background-color: #676767;
 	position: fixed;
 	top: 100px;
 	left: -300px;
@@ -50,10 +49,6 @@
 	transform: rotateZ(405deg) translate(-8px, -6px);
 }
 
-.nav-list {
-
-}
-
 .nav-item {
 	list-style: none;
 	margin: 25px;
@@ -61,7 +56,7 @@
 
 .nav-link {
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 18px;
 	color: white;
 	font-weight: 300;
 	letter-spacing: 1px;
@@ -75,7 +70,7 @@
 	content: "";
 	width: 100%;
 	height: 2px;
-	background-color: #676767;
+	background-color: #AFAFAF;
 	position: absolute;
 	left: 0;
 	transform: scaleX(0);
